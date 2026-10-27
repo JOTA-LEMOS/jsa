@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Par ou Ímpar</title>
+</head>
+<body>
+
+    <input type="number" id="A" placeholder="Digite um número a">  
+   
+    <button onclick="somaAteN()">Verificar</button>
+
+    <script>
+        function somaAteN() {
+            
+            let F = Number(document.getElementById("A").value);
+            let H=0;
+            for(G=0;G<=F;G++){
+                H=H+G;
+            }
+
+            alert(`O número ${H}`);
+             
+        }
+    </script>
+
+</body>
+</html>
