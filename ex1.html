@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Par ou Ímpar</title>
+</head>
+<body>
+
+    <input type="number" id="entrada" placeholder="Digite um número">
+    <button onclick="ehPar()">Verificar</button>
+
+    <script>
+        function ehPar() {
+            // Pega o valor do input e converte para número
+            let n = Number(document.getElementById("entrada").value);
+
+            // Verifica se é par ou ímpar
+            if (n % 2 === 0) {
+                alert(`O número ${n} é par.`);
+            } else {
+                alert(`O número ${n} é ímpar.`);
+            }
+        }
+    </script>
+
+</body>
+</html>

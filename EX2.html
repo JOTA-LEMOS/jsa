@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Par ou Ímpar</title>
+</head>
+<body>
+
+    <input type="number" id="A" placeholder="Digite um número a">  
+    <br>
+    <input type="number" id="B" placeholder="Digite um número b ">
+    <br>
+    <input type="number" id="C" placeholder="Digite um número c ">
+    <button onclick="maior()">Verificar</button>
+
+    <script>
+        function maior() {
+            
+            let F = Number(document.getElementById("A").value);
+            let G = Number(document.getElementById("B").value);
+            let H = Number(document.getElementById("C").value);
+
+
+            if(F>G && F>H)
+            alert(`O número ${F} é maior que ${G} E ${H}.`);
+            else{if (G>F && G>H) {
+                alert(`O número ${G} é maior que ${F} E ${H}.`);
+            } else {
+                alert(`O número ${H} é maior que ${G} E ${F}.`);
+            }
+
+            }            
+        }
+    </script>
+
+</body>
+</html>
