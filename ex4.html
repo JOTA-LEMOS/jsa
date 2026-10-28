@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Inverter String</title>
+</head>
+<body>
+
+    <input type="text" id="A" placeholder="Digite um texto...">  
+    <button onclick="inverterString()">Inverter</button>
+
+    <p id="resultado"></p>
+
+    <script>
+        function inverterString() {
+            // 1. Pega o valor digitado no input
+            let texto = document.getElementById("A").value;
+            let textoInvertido = "";
+
+            // 2. Percorre a string de trás para frente usando um loop for
+            for (let i = texto.length - 1; i >= 0; i--) {
+                textoInvertido += texto[i];
+            }
+
+            // 3. Exibe o resultado na tela
+            document.getElementById("resultado").innerText = "Resultado: " + textoInvertido;
+        }
+    </script>
+
+</body>
+</html>
