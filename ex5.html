@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Contar Vogais</title>
+</head>
+<body>
+
+    <input type="text" id="A" placeholder="Digite um texto...">
+    <button onclick="contarVogais()">Contar Vogais</button>
+
+    <p id="resultado"></p>
+
+    <script>
+        function contarVogais() {
+            // 1. Pega o texto digitado
+            let texto = document.getElementById("A").value;
+
+            // 2. Define todas as vogais (maiúsculas, minúsculas e acentuadas)
+            let vogais = "aeiouAEIOUáàãâäéèêëíìîïóòõôöúùûüÁÀÃÂÄÉÈÊËÍÌÎÏÓÒÕÔÖÚÙÛÜ";
+
+            let contador = 0;
+
+            // 3. Percorre cada caractere do texto
+            for (let i = 0; i < texto.length; i++) {
+                if (vogais.includes(texto[i])) {
+                    contador++;
+                }
+            }
+
+            // 4. Exibe o resultado
+            document.getElementById("resultado").innerText =
+                "Quantidade de vogais: " + contador;
+        }
+    </script>
+
+</body>
+</html>
