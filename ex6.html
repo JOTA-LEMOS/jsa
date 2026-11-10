@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Palíndromo</title>
+</head>
+<body>
+
+    <input type="text" id="A" placeholder="Digite um texto...">
+    <button onclick="ehPalindromo()">Verificar</button>
+
+    <p id="resultado"></p>
+
+    <script>
+        function ehPalindromo() {
+            // 1. Pega o texto digitado
+            let texto = document.getElementById("A").value;
+
+            // 2. Remove espaços e converte para minúsculas
+            let textoLimpo = texto.toLowerCase().replaceAll(" ", "");
+
+            let textoInvertido = "";
+
+            // 3. Inverte a string
+            for (let i = textoLimpo.length - 1; i >= 0; i--) {
+                textoInvertido += textoLimpo[i];
+            }
+
+            // 4. Verifica se é palíndromo
+            if (textoLimpo === textoInvertido) {
+                document.getElementById("resultado").innerText =
+                    "Resultado: true";
+            } else {
+                document.getElementById("resultado").innerText =
+                    "Resultado: false";
+            }
+        }
+    </script>
+
+</body>
+</html>
